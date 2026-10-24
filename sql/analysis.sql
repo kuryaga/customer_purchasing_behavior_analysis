@@ -9,8 +9,8 @@ SELECT COUNT(*) as total_clients,
     COUNT(DISTINCT(user_id)) AS unique_customers
 from customers;
 
---There are 238 customers.
--- 238 unique values. The dataset does not contain any duplicates.
+-- There are 238 customers with 238 unique customer IDs.
+-- No duplicate customer IDs were found.
 
 SELECT
     SUM(CASE WHEN user_id IS NULL THEN 1 ELSE 0 END) AS missing_id,
